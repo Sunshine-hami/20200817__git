@@ -1,7 +1,20 @@
-%container
-{
-    max-width: 1340px;
-    margin: auto;
-    padding-right: $gap;
-    padding-left: $gap;
+%container {
+  max-width: 1340px;
+  margin: auto;
+  padding-right: $gap;
+  padding-left: $gap;
+}
+%section {
+  @include lg-min {
+    padding-top: $gap * 5;
+    padding-bottom: $gap * 5;
+  }
+  @include lg-md {
+    padding-top: $gap * 4;
+    padding-bottom: $gap * 4;
+  }
+  @include md {
+    padding-top: $gap * 3;
+    padding-bottom: $gap * 3;
+  }
 }

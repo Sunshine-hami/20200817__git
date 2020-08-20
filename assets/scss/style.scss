@@ -24,30 +24,3 @@
 @import 'footer';
 
 
-.skills__button{
-    
-    display: flex;
-
-    
-    @include sm-min
-    {
-        justify-content: center;
-    }
-    @include sm
-    {
-        flex-direction: column;
-
-        align-items: center;
-    }
-    .btn:first-of-type
-    {
-        @include sm-min
-        {
-            margin-right: $gap;
-        }
-        @include sm
-        {
-            margin-bottom: $gap;
-        }
-    }
-}
