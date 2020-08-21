@@ -58,6 +58,15 @@ h2 {
   }
 }
 
+h3 {
+  letter-spacing: 0.05em;
+
+  color: $color-gray;
+
+  font-size: 1.125rem;
+}
+
+
 a {
   text-decoration: none;
 
@@ -75,7 +84,7 @@ a {
 
 .btn {
   border: 2px solid $color-light;
-  //background-color: rgba(255, 255, 255, 0.1);
+  
   background-color: rgba($color-light, 0.1);
 
   @include lg-min {
@@ -104,7 +113,7 @@ a {
   padding: 18px $gap;
 
   border: 2px solid $color-primary;
-  //background-color: rgba(45, 54, 81, 0.1);
+  
   background-color: rgba($color-primary, 0.8);
 
   font-size: 1.125rem;

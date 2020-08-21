@@ -1,0 +1,62 @@
+.post-item{
+    transition: background-color 0.5s;
+    background-color: #EEEEEE;
+&:hover{
+    .post-item__image img {
+        transform: scale(1.1);
+      }
+  
+      h3 {
+        color: $color-gray;
+      }
+  
+      p {
+        color: $color-gray;
+      }
+    }
+  
+
+&__link {
+    display: grid;
+    overflow: hidden;
+color:$color-gray;
+    height: 100%;
+
+    grid-template-rows: 300px 1fr;
+  }
+  &__image {
+    display: flex;
+    overflow: hidden;
+    align-content: center;
+    justify-content: center;
+
+    background-color: $color-gray;
+
+    img {
+      width: 100%;
+
+      transition: transform 0.5s;
+
+      object-fit: cover;
+    }
+  }
+
+  &__caption {
+    display: grid;
+    align-content: center;
+
+    padding: $gap;
+
+    h3 {
+      transition: color 0.5s;
+      text-align: center;
+
+      font-family: $font-header;
+    }
+
+    p {
+      transition: color 0.5s;
+      text-align: center;
+    }
+  }
+}
