@@ -1,16 +1,15 @@
 .footer {
-    padding: ($gap * 2.5) $gap ($gap * 3.5);
-  
-    text-align: center;
-  
-    background-color: $color-primary;
-  
-    &__container {
-      @extend %container;
-    }
-}
+  padding: ($gap * 2.5) $gap ($gap * 3.5);
 
-.footer__icon{
+  text-align: center;
+
+  background-color: $color-primary;
+
+  &__container {
+    @extend %container;
+  }
+
+  &__social {
     position: relative;
 
     display: grid;
@@ -21,36 +20,37 @@
     grid-template-columns: repeat(auto-fit, minmax(50px, max-content));
 
     &::after {
-        position: absolute;
-        bottom: -$gap;
-        left: calc(50% - 75px / 2);
-  
-        width: 75px;
-        height: 2px;
-  
-        content: "";
-  
-        background-color: rgba($color-light, 0.1);
-}
-}
-a {
-    
+      position: absolute;
+      bottom: -$gap;
+      left: calc(50% - 75px / 2);
 
-    padding: $gap / 2;
+      width: 75px;
+      height: 2px;
 
-    transition: color 0.5s;
+      content: "";
 
-    &:hover,
-    &:focus {
-      color: $color-accent;
+      background-color: rgba($color-light, 0.1);
+    }
+
+    a {
+      display: block;
+
+      padding: $gap / 2;
+
+      transition: color 0.5s;
+
+      &:hover,
+      &:focus {
+        color: $color-accent;
+      }
+    }
+
+    .fab {
+      font-size: 36px;
     }
   }
 
-  .far {
-    font-size: 36px;
-  }
-
-  .footer__copy {
+  &__copy {
     span {
       &:nth-of-type(1) {
         margin-right: -0.5em;
@@ -69,4 +69,4 @@ a {
       }
     }
   }
-
+}

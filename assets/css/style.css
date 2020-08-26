@@ -484,10 +484,13 @@ html {
 
 h1 {
   font-family: "Roboto Slab", serif;
+  font-weight: 300;
+  line-height: 1.2em;
 }
 
 h2 {
   letter-spacing: 0.1em;
+  margin-top: 0;
   color: #2d3651;
   font-family: "Roboto Slab", serif;
   line-height: 1.2em;
@@ -502,6 +505,14 @@ h3 {
 a {
   text-decoration: none;
   color: #fff;
+}
+
+p {
+  color: #637588;
+}
+
+input:focus {
+  outline: none;
 }
 
 .btn,
@@ -748,8 +759,13 @@ a {
 
 .skill-item {
   position: relative;
+  display: grid;
   overflow: hidden;
-  min-height: calc(33.333vh - 13.333px);
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 20px;
+  justify-items: center;
   background-color: #2d3651;
 }
 
@@ -783,7 +799,7 @@ a {
 }
 
 .skill-item__title {
-  z-index: 2;
+  z-index: 1;
   margin: 0;
   position: absolute;
   top: 0;
@@ -999,7 +1015,11 @@ a {
   -webkit-transition: background-color 0.5s;
   -o-transition: background-color 0.5s;
   transition: background-color 0.5s;
-  background-color: #EEEEEE;
+  background-color: #f2f2f2;
+}
+
+.post-item:hover {
+  background-color: #d8d8d8;
 }
 
 .post-item:hover .post-item__image img {
@@ -1009,11 +1029,11 @@ a {
 }
 
 .post-item:hover h3 {
-  color: #637588;
+  color: #2d3651;
 }
 
 .post-item:hover p {
-  color: #637588;
+  color: #2d3651;
 }
 
 .post-item__link {
@@ -1034,7 +1054,7 @@ a {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  background-color: #637588;
+  background-color: #2d3651;
 }
 
 .post-item__image img {
@@ -1100,7 +1120,7 @@ a {
   background-color: #2d3651;
 }
 
-.footer__icon {
+.footer__social {
   position: relative;
   display: grid;
   -webkit-box-pack: center;
@@ -1111,7 +1131,7 @@ a {
   grid-template-columns: repeat(auto-fit, minmax(50px, max-content));
 }
 
-.footer__icon::after {
+.footer__social::after {
   position: absolute;
   bottom: -20px;
   left: calc(50% - 75px / 2);
@@ -1121,18 +1141,19 @@ a {
   background-color: rgba(255, 255, 255, 0.1);
 }
 
-a {
+.footer__social a {
+  display: block;
   padding: 10px;
   -webkit-transition: color 0.5s;
   -o-transition: color 0.5s;
   transition: color 0.5s;
 }
 
-a:hover, a:focus {
+.footer__social a:hover, .footer__social a:focus {
   color: #d66926;
 }
 
-.far {
+.footer__social .fab {
   font-size: 36px;
 }
 
@@ -1171,6 +1192,12 @@ a:hover, a:focus {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+  }
+}
+
+@media (min-height: 691px) {
+  .skill-item {
+    min-height: calc(33.33vh - 20px * 0.66);
   }
 }
 
@@ -1328,6 +1355,12 @@ a:hover, a:focus {
   .posts__grid {
     grid-template-columns: 1fr 1fr;
     grid-template-areas: "p1 p2" "p3 p4" "p5 p6";
+  }
+}
+
+@media (max-height: 690px) {
+  .skill-item {
+    min-height: calc(230px - 20px * 0.66);
   }
 }
 

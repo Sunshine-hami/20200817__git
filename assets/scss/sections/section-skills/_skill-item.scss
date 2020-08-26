@@ -1,12 +1,23 @@
 .skill-item {
     position: relative;
-  
+    display: grid;
     overflow: hidden;
+    align-items: center;
+
+    padding: $gap;
   
-    min-height: calc(33.333vh - 13.333px);
-  
+    justify-items: center;
     background-color: $color-primary;
-    //TODO: не менее 200px по высоте
+    
+    @media (min-height: 691px) {
+      min-height: calc(33.33vh - #{$gap} * 0.66);
+    }
+  
+    @media (max-height: 690px) {
+      min-height: calc(230px - #{$gap} * 0.66);
+    }
+    
+  
   
     &__image {
       transition: transform 0.5s;
@@ -29,7 +40,7 @@
     }
   
     &__title {
-      z-index: 2;
+      z-index: 1;
   
       margin: 0;
   
