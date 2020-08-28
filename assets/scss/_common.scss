@@ -3,8 +3,6 @@
 }
 
 html {
-  overflow-y: scroll;
-
   color: $color-gray;
 
   font-family: $font-main;
@@ -15,6 +13,7 @@ h1 {
   font-family: $font-header;
   font-weight: 300;
   line-height: 1.2em;
+
   @include lg-min {
     font-size: 3.75rem;
   }
@@ -80,62 +79,16 @@ p {
 input:focus {
   outline: none;
 }
-.btn,
-.btn-accent {
-  display: block;
-
-  transition: background-color 0.5s;
-  text-align: center;
-  letter-spacing: 0.1em;
-}
-
 .btn {
-  border: 2px solid $color-light;
-  
+  border-color: $color-light;
   background-color: rgba($color-light, 0.1);
 
-  @include lg-min {
-    min-width: 250px;
-    height: 60px;
-    padding: 18px $gap;
-
-    font-size: 1.125rem;
-  }
-  @include lg-md {
-    min-width: 200px;
-    height: 50px;
-    padding: 14px $gap;
-  }
-  @include md {
-    min-width: 170px;
-    height: 40px;
-    padding: 10px $gap;
-
-    letter-spacing: 0.05em;
-  }
+  @extend %btn-common;
 }
 
 .btn-accent {
-  height: 60px;
-  padding: 18px $gap;
-
-  border: 2px solid $color-primary;
-  
+  border-color: $color-primary;
   background-color: rgba($color-primary, 0.8);
 
-  font-size: 1.125rem;
-
-  @include sm-min {
-    min-width: 350px;
-  }
-  @include sm {
-    width: 100%;
-  }
-}
-
-.btn:hover,
-.btn:focus,
-.btn-accent:hover,
-.btn-accent:focus {
-  background-color: $color-accent;
+  @extend %btn-common;
 }

@@ -470,13 +470,30 @@ template {
   padding-left: 20px;
 }
 
+.btn, .btn-accent {
+  display: block;
+  height: 60px;
+  padding: 18px 20px;
+  -webkit-transition: background-color 0.5s, border-color 0.5s;
+  -o-transition: background-color 0.5s, border-color 0.5s;
+  transition: background-color 0.5s, border-color 0.5s;
+  text-align: center;
+  letter-spacing: 0.1em;
+  border-width: 2px;
+  border-style: solid;
+  font-size: 1.125rem;
+}
+
+.btn:hover, .btn-accent:hover, .btn:focus, .btn-accent:focus {
+  background-color: #d66926;
+}
+
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
 
 html {
-  overflow-y: scroll;
   color: #637588;
   font-family: "Roboto", sans-serif;
   font-size: 16px;
@@ -515,34 +532,14 @@ input:focus {
   outline: none;
 }
 
-.btn,
-.btn-accent {
-  display: block;
-  -webkit-transition: background-color 0.5s;
-  -o-transition: background-color 0.5s;
-  transition: background-color 0.5s;
-  text-align: center;
-  letter-spacing: 0.1em;
-}
-
 .btn {
-  border: 2px solid #fff;
+  border-color: #fff;
   background-color: rgba(255, 255, 255, 0.1);
 }
 
 .btn-accent {
-  height: 60px;
-  padding: 18px 20px;
-  border: 2px solid #2d3651;
+  border-color: #2d3651;
   background-color: rgba(45, 54, 81, 0.8);
-  font-size: 1.125rem;
-}
-
-.btn:hover,
-.btn:focus,
-.btn-accent:hover,
-.btn-accent:focus {
-  background-color: #d66926;
 }
 
 .header {
@@ -748,15 +745,6 @@ input:focus {
   margin-bottom: 20px;
 }
 
-.skills__button {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
 .skill-item {
   position: relative;
   display: grid;
@@ -801,6 +789,7 @@ input:focus {
 .skill-item__title {
   z-index: 1;
   margin: 0;
+  letter-spacing: 0.1em;
   position: absolute;
   top: 0;
   right: 0;
@@ -825,7 +814,6 @@ input:focus {
   -o-transition: color 0.5s;
   transition: color 0.5s;
   letter-spacing: 0.1em;
-  font-size: 1.25rem;
 }
 
 .skill-item:hover .skill-item__overlay {
@@ -1170,9 +1158,6 @@ input:focus {
 }
 
 @media (min-width: 576px) {
-  .btn-accent {
-    min-width: 350px;
-  }
   .header-content__buttons {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
@@ -1184,6 +1169,14 @@ input:focus {
   .skills {
     margin-bottom: 30px;
     padding: 10px;
+  }
+  .skills__button {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
   .posts__button {
     display: -webkit-box;
@@ -1214,6 +1207,9 @@ input:focus {
     grid-template-columns: repeat(auto-fit, minmax(50px, -webkit-max-content));
     grid-template-columns: repeat(auto-fit, minmax(50px, max-content));
   }
+  .skill-item {
+    font-size: 1.25rem;
+  }
 }
 
 @media (min-width: 992px) {
@@ -1228,17 +1224,12 @@ input:focus {
     margin-bottom: 56px;
     font-size: 2.5rem;
   }
-  .btn {
-    min-width: 250px;
-    height: 60px;
-    padding: 18px 20px;
-    font-size: 1.125rem;
-  }
   .header-content__title {
     margin: 0 0 53px 0;
   }
   .skills__container {
     grid-gap: 10px;
+    grid-template-columns: repeat(4, 1fr);
     grid-template-areas: "a1 a1 a2 a3" "a4 a5 a5 a6" "a7 a8 a9 a6";
   }
   .about__container {
@@ -1272,16 +1263,12 @@ input:focus {
     margin-bottom: 42px;
     font-size: 2rem;
   }
-  .btn {
-    min-width: 200px;
-    height: 50px;
-    padding: 14px 20px;
-  }
   .header-content__title {
     margin: 0 0 43px 0;
   }
   .skills__container {
     grid-gap: 10px;
+    grid-template-columns: repeat(3, 1fr);
     grid-template-areas: "a1 a1 a2" "a3 a4 a4" "a5 a5 a6" "a7 a8 a6" "a7 a9 a9";
   }
   .about__container {
@@ -1308,12 +1295,6 @@ input:focus {
   h1 {
     font-size: 1.875rem;
   }
-  .btn {
-    min-width: 170px;
-    height: 40px;
-    padding: 10px 20px;
-    letter-spacing: 0.05em;
-  }
   .header-menu {
     background-color: rgba(68, 89, 110, 0.25);
   }
@@ -1328,6 +1309,9 @@ input:focus {
   .header-content__title {
     margin: 0 0 33px 0;
   }
+  .skill-item {
+    font-size: 1.125rem;
+  }
 }
 
 @media (max-width: 767.8px) and (min-width: 576px) {
@@ -1337,6 +1321,7 @@ input:focus {
   }
   .skills__container {
     grid-gap: 10px;
+    grid-template-columns: 1fr 1fr;
     grid-template-areas: "a1 a2" "a3 a2" "a4 a4" "a5 a6" "a5 a7" "a8 a9";
   }
   .about__container {
@@ -1370,9 +1355,6 @@ input:focus {
     text-align: center;
     font-size: 1.5rem;
   }
-  .btn-accent {
-    width: 100%;
-  }
   .header-content__buttons {
     -webkit-box-align: center;
         -ms-flex-align: center;
@@ -1390,6 +1372,7 @@ input:focus {
   }
   .skills__container {
     grid-gap: 20px;
+    grid-template-columns: 1fr;
     grid-template-areas: "a1" "a2" "a3" "a4" "a5" "a6" "a7" "a8" "a9";
   }
   .about__container {
