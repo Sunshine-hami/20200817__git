@@ -38,6 +38,17 @@
       @include sm-min {
       display: flex;
       justify-content: center;
+
+      .btn-accent {
+        @include sm-min {
+          min-width: 350px;
+        }
+        @include sm {
+          width: 100%;
+        }
+      }
+      
+
     }
   }
 }

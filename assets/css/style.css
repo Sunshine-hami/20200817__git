@@ -738,6 +738,11 @@ input:focus {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .skills__container {
@@ -1163,9 +1168,6 @@ input:focus {
         -ms-flex-pack: center;
             justify-content: center;
   }
-  .header-content__buttons .btn:first-of-type {
-    margin-right: 20px;
-  }
   .skills {
     margin-bottom: 30px;
     padding: 10px;
@@ -1185,6 +1187,21 @@ input:focus {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+  }
+  .posts__button .btn-accent {
+    min-width: 350px;
+  }
+}
+
+@media (min-width: 576px) and (max-width: 575.8px) {
+  .skills__button .btn-accent {
+    width: 100%;
+  }
+}
+
+@media (min-width: 576px) and (min-width: 576px) {
+  .skills__button .btn-accent {
+    min-width: 350px;
   }
 }
 
@@ -1227,6 +1244,12 @@ input:focus {
   .header-content__title {
     margin: 0 0 53px 0;
   }
+  .header-content__buttons .btn {
+    min-width: 250px;
+  }
+  .header-content__buttons .btn:not(:last-of-type) {
+    margin-right: 20px;
+  }
   .skills__container {
     grid-gap: 10px;
     grid-template-columns: repeat(4, 1fr);
@@ -1265,6 +1288,17 @@ input:focus {
   }
   .header-content__title {
     margin: 0 0 43px 0;
+  }
+  .header-content__buttons .btn {
+    min-width: 200px;
+    height: 50px;
+    padding-top: 14px;
+    padding-bottom: 14px;
+    letter-spacing: 0.1em;
+    font-size: 1rem;
+  }
+  .header-content__buttons .btn:not(:last-of-type) {
+    margin-right: 20px;
   }
   .skills__container {
     grid-gap: 10px;
@@ -1319,6 +1353,17 @@ input:focus {
     margin-bottom: 36px;
     font-size: 1.5rem;
   }
+  .header-content__buttons .btn {
+    min-width: 170px;
+    height: 40px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    letter-spacing: 0.05em;
+    font-size: 1rem;
+  }
+  .header-content__buttons .btn:not(:last-of-type) {
+    margin-right: 20px;
+  }
   .skills__container {
     grid-gap: 10px;
     grid-template-columns: 1fr 1fr;
@@ -1364,7 +1409,15 @@ input:focus {
         -ms-flex-direction: column;
             flex-direction: column;
   }
-  .header-content__buttons .btn:first-of-type {
+  .header-content__buttons .btn {
+    min-width: 170px;
+    height: 40px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    letter-spacing: 0.05em;
+    font-size: 1rem;
+  }
+  .header-content__buttons .btn:not(:last-of-type) {
     margin-bottom: 20px;
   }
   .skills {
@@ -1385,5 +1438,8 @@ input:focus {
   .posts__grid {
     grid-template-columns: 1fr;
     grid-template-areas: "p1" "p2" "p3" "p4" "p5" "p6";
+  }
+  .posts__button .btn-accent {
+    width: 100%;
   }
 }
