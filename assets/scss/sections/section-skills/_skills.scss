@@ -1,7 +1,6 @@
 .skills {
     @include sm-min {
-      margin-bottom: $gap / 2 * 3;
-      padding: $gap / 2;
+      padding: ($gap / 2) ($gap / 2) ($gap * 2);
     }
     @include sm {
       padding: $gap;
