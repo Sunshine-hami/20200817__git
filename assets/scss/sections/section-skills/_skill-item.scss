@@ -17,16 +17,17 @@
       min-height: calc(230px - #{$gap} * 0.66);
     }
     
- 
+    &__link {
+      display: flex;
+      align-items: center;
+      justify-content: center;
   
+      width: 100%;
+      height: 100%;
+      padding: $gap;
   
-    &__image {
-      transition: transform 0.5s;
-  
-      background-position: 50% 50%;
-      background-size: cover;
-  
-      @include abs-position;
+      transition: color 0.5s;
+      letter-spacing: 0.1em; 
     }
   
     &__overlay {
@@ -40,6 +41,17 @@
       @include abs-position;
     }
   
+    &__image {
+      transition: transform 0.5s;
+  
+      background-position: 50% 50%;
+      background-size: cover;
+  
+      @include abs-position;
+    }
+  
+    
+  
     &__title {
       z-index: 1;
   
@@ -47,7 +59,7 @@
       letter-spacing: 0.1em;
 
       @include abs-position;
-    }
+    
 
     @include md-min {
       font-size: 1.25rem;
@@ -55,22 +67,9 @@
     @include md {
       font-size: 1.125rem;
     }
+  }
   
-  
-    &__link {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-  
-      width: 100%;
-      height: 100%;
-      padding: $gap;
-  
-      transition: color 0.5s;
-      letter-spacing: 0.1em;
-  
-      
-    }
+    
   
     &:hover {
       .skill-item__overlay {
@@ -84,5 +83,4 @@
         color: $color-accent;
       }
     }
-  }
-  
+}
